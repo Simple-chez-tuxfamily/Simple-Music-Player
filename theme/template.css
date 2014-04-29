@@ -1,0 +1,500 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('../theme/fonts/opensans.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../theme/fonts/opensansbold.woff') format('woff');
+}
+@font-face {
+  font-family: 'smp';
+  src: url('../theme/fonts/simplemusicplayer.eot');
+  src: url('../theme/fonts/simplemusicplayer.eot') format('embedded-opentype'), url('../theme/fonts/simplemusicplayer.woff') format('woff'), url('../theme/fonts/simplemusicplayer.ttf') format('truetype'), url('../theme/fonts/simplemusicplayer.svg#simplemusicplayer') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #eee;
+  background: url(../theme/images/bg.jpg) #ddd no-repeat top center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0 0 0 300px;
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+  font-size: 14px;
+}
+
+#bg_connexion {
+  padding: 0;
+}
+
+#content {
+  padding: 15px 25px 30px;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+  margin: 30px 30px 30px 60px;
+}
+
+nav {
+  float: left;
+  width: 300px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 0 5px #999;
+  margin: 30px;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  overflow-y: hidden;
+}
+
+#menu:hover {
+  overflow-y: auto;
+}
+
+nav ul li {
+  color: #7A3972;
+  padding: 20px 0 10px 15px;
+  font-size: 15px;
+  position: relative;
+}
+
+nav ul ul li {
+  padding: 0;
+}
+
+nav ul ul li:hover {
+  cursor: pointer;
+  background: #894081;
+  color: #fff;
+}
+
+nav ul ul li a {
+  padding: 7px 0 7px 35px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav ul ul li a:hover {
+  color: #fff;
+}
+
+#player {
+  height: 67px;
+  position: fixed;
+  top: 370px;
+  left: 30px;
+  width: 300px;
+}
+
+#player #infos_lecture {
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  color: #666;
+  box-shadow: inset 0 0 5px #999;
+  font-size: 13px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+#player #slider {
+  width: 300px;
+  height: 7px;
+  background: #eee;
+  z-index: 30;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.ui-slider-range-min {
+  background: #894081;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 50%;
+  height: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+#player .ui-slider-handle {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #894081;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 60;
+  position: absolute;
+  top: -2px;
+  margin-left: -6px;
+  box-shadow: 0 0 3px #555;
+}
+
+a:hover,a:active,a:focus {
+  outline: 0;
+}
+
+.infosboutons {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  z-index: 20;
+  color: #6D3365;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+}
+
+.infosboutons #actuel {
+  border-right: 1px solid #ddd;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  float: left;
+}
+
+.infosboutons #total {
+  width: 60px;
+  text-align: center;
+  float: left;
+}
+
+.infosboutons #precedent,.infosboutons #playpause,.infosboutons #suivant,.infosboutons #shuffle,.infosboutons #repeat {
+  width: 34px;
+  height: 30px;
+  border-right: 1px solid #ddd;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr.chanson {
+  height: 40px;
+  color: #333;
+}
+
+table tr.chanson:hover {
+  cursor: pointer;
+  background: #f5f5f5;
+}
+
+table tr.chanson td {
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 0 20px;
+}
+
+table tr.titre {
+  border-bottom: 1px solid #A34C99;
+  color: #894081;
+  font-size: 17px;
+  margin: 20px 0 10px;
+  position: relative;
+}
+
+table tr.titre th {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.joue {
+  font-weight: 700;
+}
+
+.icone {
+  font-family: smp;
+}
+
+.illustration {
+  color: #aaa;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+li:hover .illustration {
+  color: #eee;
+}
+
+.actif {
+  background: #894081;
+  color: #fff;
+}
+
+#mode {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  font-size: 10px;
+  color: #894081;
+  display: none;
+  background: #fff;
+  height: 15px;
+  line-height: 15px;
+  width: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+#content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#content ul li {
+  border-bottom: 1px solid #A34C99;
+  color: #894081;
+  padding: 10px 0;
+  font-size: 17px;
+  margin: 10px 0;
+  position: relative;
+}
+
+#content ul ul li {
+  background: #fff;
+  margin: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #333;
+  display: inline-block;
+  width: 130px;
+  vertical-align: top;
+}
+
+#content ul ul li:hover {
+  cursor: pointer;
+  border: 1px solid #CE9FC9;
+}
+
+#content ul ul li img {
+  margin: -5px -10px 5px;
+  width: 150px;
+  display: block;
+}
+
+#content ul ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+#content h1 {
+  font-weight: 400;
+  color: #333;
+  font-size: 30px;
+  margin-top: 0;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+#content h1 .icone {
+  margin-right: 10px;
+}
+
+.bouton {
+  display: inline-block;
+  border: 1px solid #ddd;
+  color: #777;
+  padding: 7px 15px;
+  text-decoration: none;
+  margin: 10px 10px 5px 0;
+  float: right;
+}
+
+.ecouter {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.ecouter:hover {
+  color: #D363C6;
+  cursor: pointer;
+}
+
+.m3u {
+  position: absolute;
+  right: 40px;
+  bottom: 8px;
+  color: #1C6A89;
+  text-decoration: none;
+}
+
+.m3u:hover {
+  color: #894081;
+  cursor: pointer;
+}
+
+.titrealbum {
+  font-style: italic;
+}
+
+.bouton:hover {
+  border: 1px solid #894081;
+  color: #894081;
+  cursor: pointer;
+}
+
+#jplayer {
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+/*
+ * Design des formulaires
+*/
+form input {
+  background: #fefefe;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px;
+  width: 300px;
+  display: inline-block;
+}
+
+form input[type=submit] {
+  background: #fff;
+  border: 1px solid #894081;
+  color: #894081;
+  cursor: pointer;
+  width: 322px;
+  padding: 9px;
+}
+
+form input[type=submit]:hover {
+  background: #894081;
+  color: #fff;
+}
+
+form input[type=file] {
+  cursor: pointer;
+  padding: 6px;
+}
+
+form input:focus {
+  border: 1px solid #894081;
+}
+
+#connexion {
+  border-top: 3px solid #894081;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+  width: 350px;
+  margin: 150px auto 0;
+}
+
+#connexion h1 {
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 15px;
+}
+
+#connexion #formulaire {
+  padding: 20px 20px 5px;
+}
+
+#connexion input {
+  margin: 0;
+  padding: 10px;
+  width: 288px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+#connexion input[type=submit] {
+  background: #fff;
+  color: #894081;
+  width: 310px;
+}
+
+#connexion input[type=submit]:hover {
+  background: #894081;
+  color: #fff;
+  cursor: pointer;
+}
+
+#connexion input[type=text]:focus,#connexion input[type=password]:focus,#connexion input[type=email]:focus {
+  border: 1px solid #894081;
+}
+
+#connexion input[type=checkbox] {
+  width: 15px;
+}
+
+#connexion label {
+  color: #999;
+  font-size: 15px;
+  display: block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+tr .supprzone,#suppression2 {
+  display: none;
+}
+
+#notification {
+  position: fixed;
+  width: 350px;
+  line-height: 24px;
+  z-index: 30;
+  font-size: 13px;
+  font-weight: 700;
+  right: 15px;
+  top: 15px;
+  box-shadow: 0 0 5px #999;
+  color: #111;
+  padding: 15px 25px;
+  background: #fff;
+  opacity: 0.75;
+  border-radius: 3px;
+}
+
+#notification:hover {
+  opacity: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+#content a,#notification a {
+  color: #894081;
+  text-decoration: none;
+}
