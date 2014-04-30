@@ -28,7 +28,7 @@
 	
 	// On vérifie si une mise à jour est disponible (si cela n'a pas déjà été fait et si l'utilisateur est connecté)
 	if($_GET['p'] != 'connexion' && !isset($_SESSION['verif_maj_ok'])){
-		$version_actuelle = 0.1;
+		$version_actuelle = 0.2;
 		$version_stable_actuelle = file_get_contents('http://simple.tuxfamily.org/version.smp');
 		
 		$_SESSION['verif_maj_ok'] = true;
