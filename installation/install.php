@@ -9,6 +9,7 @@
 			$sqlite->query('DELETE FROM users');
             $sqlite->query('INSERT INTO users (username, password, admin) VALUES(' . $user . ',' . $pass . ', "1")');
             
+			mkdir('../data');
 			mkdir('../data/' . $_POST['pseudo']);
 		    mkdir('../data/' . $_POST['pseudo'] . '/pictures');
 			mkdir('../data/' . $_POST['pseudo'] . '/songs');
