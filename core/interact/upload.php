@@ -39,10 +39,10 @@
             $song_file = md5(strtolower($_FILES['sons']['name'][$i])) . '.' . substr(strrchr($_FILES['sons']['name'][$i], '.'), 1);
             $original_name = strtolower($_FILES['sons']['name'][$i]);
             
-            if(file_exists('../data/' . $_SESSION['uname'] . '/songs/' . $song_file))
+            if(file_exists(ROOT.'data/' . $_SESSION['uname'] . '/songs/' . $song_file))
                 die('Le fichier existe déjà!');
                 
-            move_uploaded_file($_FILES['sons']['tmp_name'][$i], '../data/' . $_SESSION['uname'] . '/songs/' . $song_file);
+            move_uploaded_file($_FILES['sons']['tmp_name'][$i], ROOT.'data/' . $_SESSION['uname'] . '/songs/' . $song_file);
             
             include 'interact/scan.php';
             

@@ -6,7 +6,7 @@
     
     $title = urldecode($_GET['album_name']) . ' par ' . urldecode($_GET['artist_name']);
 	
-?><h1><span class="icone">p</span> <em><?php echo urldecode($_GET['album_name']) . '</em> par ' . urldecode($_GET['artist_name']); ?></h1></h1>
+?><h1><span class="icone">p</span> <em><?php echo urldecode($_GET['album_name']) . '</em> par ' . urldecode($_GET['artist_name']); ?></h1>
 
 <table>
     <a class="bouton" href="#" onclick="charger_playlist('<?php echo $_GET['artist_name']; ?>', '<?php echo $_GET['album_name']; ?>', null, 0);">Écouter l'album</a>
