@@ -498,3 +498,27 @@ tr .supprzone,#suppression2 {
   color: #894081;
   text-decoration: none;
 }
+
+@media (max-width:768px) {
+	body {
+		padding-left: 20px
+	}
+	nav{
+		min-width:400px;
+		position:relative;
+		margin-left:0;
+	}
+	#content {
+		margin-top:100px;
+		margin-left:0;
+		min-width:350px;
+	}
+	#player {
+		height:67px;
+		position:absolute;
+		left:20px;
+		top:0;
+		width:395px;
+	}
+	
+}

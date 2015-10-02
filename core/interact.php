@@ -4,7 +4,11 @@
      * Usage : interact.php?action=fichier[&parametre1][&parametre2]
      * Attention: fichier ne doit PAS être accompagné de l'extension PHP
     */
-    
+
+    if (!defined('ROOT')) {
+        define('DS', DIRECTORY_SEPARATOR);
+        define('ROOT', str_replace(array('/core','/installation'),'',dirname(__FILE__)).DS);
+    }
     header('Content-Type: text/html; charset=utf-8'); // Encodage
         
     session_start();

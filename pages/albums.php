@@ -15,7 +15,7 @@
             
         return $texte;
     }
-?><h1><span class="icone">p</span> Albums</h1></h1>
+?><h1><span class="icone">p</span> Albums</h1>
 <ul>
 <?php
 	$albums = array();
@@ -53,4 +53,4 @@
 	else
 		echo '<p>Rien n\'a été trouvé. Pourquoi ne pas importer de la musique?</p>';
 ?>
-</ul></ul>
+</ul>

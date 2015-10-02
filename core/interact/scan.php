@@ -1,8 +1,8 @@
 <?php
-    if(!isset($song_file, $_SESSION['uname']) or (!file_exists('../data/' . $_SESSION['uname'] . '/songs/' . $song_file)))
+    if(!isset($song_file, $_SESSION['uname']) or (!file_exists(ROOT.'data/' . $_SESSION['uname'] . '/songs/' . $song_file)))
         die('Fichier inexistant');
     
-    $song_id3 = $getID3->analyze('../data/' . $_SESSION['uname'] . '/songs/' . $song_file);
+    $song_id3 = $getID3->analyze(ROOT.'data/' . $_SESSION['uname'] . '/songs/' . $song_file);
     
     $filename = utf8_encode($song_id3['filename']);
     $filetype = utf8_encode($song_id3['fileformat']);
@@ -37,8 +37,8 @@
     else
         $album = '(album inconnu)';
     
-    if(isset($song_id3['comments']['picture'][0]['data']) && !file_exists('../data/' . $_SESSION['uname'] . '/pictures/' . md5($album) . '.png') && $album != '(album inconnu)')
-        file_put_contents('../data/' . $_SESSION['uname'] . '/pictures/' . md5($album) . '.png', $song_id3['comments']['picture'][0]['data']);
+    if(isset($song_id3['comments']['picture'][0]['data']) && !file_exists(ROOT.'data/' . $_SESSION['uname'] . '/pictures/' . md5($album) . '.png') && $album != '(album inconnu)')
+        file_put_contents(ROOT.'data/' . $_SESSION['uname'] . '/pictures/' . md5($album) . '.png', $song_id3['comments']['picture'][0]['data']);
         
     $duration = ceil($song_id3['playtime_seconds']);
     

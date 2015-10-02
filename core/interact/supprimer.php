@@ -10,7 +10,7 @@
             
             if(count($chanson) > 0){
                 $requete_chanson = $sqlite->query('DELETE FROM morceaux WHERE user_id=' . $sqlite->quote($_SESSION['id']) . ' AND id=' . $sqlite->quote($id));
-                unlink('../data/' . $_SESSION['uname'] . '/songs/' . $chanson['filename']);
+                unlink(ROOT.'data/' . $_SESSION['uname'] . '/songs/' . $chanson['filename']);
             }
         }
     }

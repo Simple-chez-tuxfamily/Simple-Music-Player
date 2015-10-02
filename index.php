@@ -1,4 +1,8 @@
 <?php
+    if (!defined('ROOT')) {
+        define('DS', DIRECTORY_SEPARATOR);
+        define('ROOT', str_replace(array('/core','/installation'),'',dirname(__FILE__)).DS);
+    }
     ob_start('ob_gzhandler'); // On active la compression GZIP
     header('Content-Type: text/html; charset=utf-8'); // On défini l'encodage (UTF-8)
         

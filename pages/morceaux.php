@@ -15,7 +15,7 @@
             
         return $texte;
     }
-?><h1><span class="icone">k</span> Morceaux</h1></h1><?php
+?><h1><span class="icone">k</span> Morceaux</h1><?php
     $sons = array();
 
     $requete_morceaux = $sqlite->query('SELECT * FROM morceaux WHERE user_id=' . $sqlite->quote($_SESSION['id']) . ' ORDER BY title ASC');

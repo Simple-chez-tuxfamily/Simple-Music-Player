@@ -59,7 +59,7 @@
 					<div id="total">--:--</div>
 				</div>
 			</div>
-		</div>
+
 	    <div class="clear"></div>
 		<div id="content"><?php echo $content; ?></div>
 		<div id="notification"></div>

@@ -26,4 +26,4 @@
 	if($premier_ul == true && $artiste_actuel == null) // Si il n'y a aucun artiste
 	    echo '<p>Rien n\'a été trouvé. Pourquoi ne pas importer de la musique?</p>';
 ?>
-</ul></ul>
+</ul>
